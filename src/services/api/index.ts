@@ -21,7 +21,7 @@ class IssTrackerAPI {
       const issInfos: IssInfos = {
         latitude: data.latitude,
         longitude: data.longitude,
-        altitude: data.longitude,
+        altitude: data.altitude,
         velocity: data.velocity,
       };
 

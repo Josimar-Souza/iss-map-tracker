@@ -16,11 +16,11 @@ export const MapAndInfosContainer = styled.div`
   height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export const MapContainer = styled.div`
-  width: 50%;
-  height: 50vh;
+  width: 45%;
+  height: 70vh;
   border: 5px solid white;
 `;
