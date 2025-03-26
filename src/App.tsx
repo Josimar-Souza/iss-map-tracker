@@ -1,10 +1,17 @@
 import CustomMap from "./components/map"
 
+import {
+  Main,
+  MapContainer,
+} from "./AppStyles"
+
 function App() {
   return (
-    <main>
-      <CustomMap />
-    </main>
+    <Main>
+      <MapContainer>
+        <CustomMap />
+      </MapContainer>
+    </Main>
   )
 }
 

@@ -20,7 +20,6 @@ function CustomMap({ children }: CustomMapProps) {
 
   return (
     <Map 
-      height={300}
       center={mapInfos.center}
       zoom={mapInfos.zoom}
       onBoundsChanged={({ center, zoom }) => {
