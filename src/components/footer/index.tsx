@@ -1,9 +1,7 @@
 import {
   FooterContainer,
   FooterTittle,
-  IconsContainer,
-  Linkedin,
-  GitHub,
+  SpaceStationIconLink,
 } from './footerStyles';
 
 type FooterProps = {
@@ -14,20 +12,13 @@ function Footer({ footerTittle }: FooterProps) {
   return (
     <FooterContainer>
       <FooterTittle>{ footerTittle }</FooterTittle>
-      <IconsContainer>
-        <a
-          href="https://www.linkedin.com/in/josimar-souza-brito/"
-          target="_blank"
-        >
-          <Linkedin />
-        </a>
-        <a
-          href="https://github.com/Josimar-Souza"
-          target="_blank"
-        >
-          <GitHub />
-        </a>
-      </IconsContainer>
+      <SpaceStationIconLink
+        href="https://www.flaticon.com/"
+        title="space station icons"
+        target="_blank"
+      >
+        Icons created by Freepik - Flaticon
+      </SpaceStationIconLink>
     </FooterContainer>
   )
 };
