@@ -9,7 +9,7 @@ import {
 function App() {
   return (
     <Main>
-      <Header />
+      <Header>ISS Map Tracker</Header>
       <MapContainer>
         <CustomMap />
       </MapContainer>

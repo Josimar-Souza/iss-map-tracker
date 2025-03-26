@@ -3,10 +3,14 @@ import {
   Tittle
 } from './headerStyles';
 
-function Header() {
+type HeaderProps = {
+  children?: React.ReactNode,
+}
+
+function Header({ children }: HeaderProps) {
   return (
     <HeaderContainer>
-      <Tittle>ISS Map Tracker</Tittle>
+      <Tittle>{ children }</Tittle>
     </HeaderContainer>
   );
 };
