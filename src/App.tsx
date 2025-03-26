@@ -1,8 +1,17 @@
+import CustomMap from "./components/map"
+
+import {
+  Main,
+  MapContainer,
+} from "./AppStyles"
+
 function App() {
   return (
-    <>
-      <h1>Initializing project!</h1>
-    </>
+    <Main>
+      <MapContainer>
+        <CustomMap />
+      </MapContainer>
+    </Main>
   )
 }
 
