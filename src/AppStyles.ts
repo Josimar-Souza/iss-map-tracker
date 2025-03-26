@@ -10,8 +10,16 @@ export const Main = styled.main`
   justify-content: space-between;
 `;
 
+export const MapAndInfosContainer = styled.div`
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
 export const MapContainer = styled.div`
-  width: 80%;
+  width: 45%;
   height: 70vh;
   border: 5px solid white;
 `;
