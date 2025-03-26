@@ -14,7 +14,7 @@ class IssTrackerAPI {
     });
   };
 
-  async getIss() {
+  async getIss(): Promise<IssInfos | undefined> {
     try {
       const { data } = await this.axios.get(`/${IssID}`);
 
@@ -27,7 +27,7 @@ class IssTrackerAPI {
 
       return issInfos;
     } catch (error) {
-
+      console.error(error);
     }
   };
 }

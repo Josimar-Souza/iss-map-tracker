@@ -6,11 +6,7 @@ type MapInfos = {
   zoom: number,
 };
 
-type CustomMapProps = {
-  children?: React.ReactNode,
-}
-
-function CustomMap({ children }: CustomMapProps) {
+function CustomMap() {
   const [mapInfos, setMapInfos] = useState<MapInfos>(
     {
       center: [50.879, 4.6997],
@@ -25,9 +21,7 @@ function CustomMap({ children }: CustomMapProps) {
       onBoundsChanged={({ center, zoom }) => {
         setMapInfos({ center, zoom });
       }}
-    >
-      { children }
-    </Map>
+    />
   )
 };
 
