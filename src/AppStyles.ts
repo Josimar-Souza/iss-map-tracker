@@ -11,7 +11,6 @@ export const Main = styled.main`
 `;
 
 export const MapAndInfosContainer = styled.div`
-  border: 2px solid red;
   width: 100%;
   height: 80vh;
   display: flex;
