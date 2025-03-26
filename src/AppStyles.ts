@@ -14,5 +14,4 @@ export const MapContainer = styled.div`
   width: 80%;
   height: 70vh;
   border: 5px solid white;
-  margin-bottom: 100px;
 `;

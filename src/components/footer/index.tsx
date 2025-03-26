@@ -1,6 +1,3 @@
-import { LinkedinIcon } from '@sanity/icons';
-import { GithubIcon } from '@sanity/icons';
-
 import {
   FooterContainer,
   FooterTittle,
