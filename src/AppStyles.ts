@@ -7,10 +7,12 @@ export const Main = styled.main`
   background-color: #85C4E1;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const MapContainer = styled.div`
   width: 80%;
   height: 70vh;
   border: 5px solid white;
+  margin-bottom: 100px;
 `;

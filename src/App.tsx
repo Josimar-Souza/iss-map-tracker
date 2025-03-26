@@ -1,4 +1,5 @@
 import CustomMap from "./components/map"
+import Header from "./components/header"
 
 import {
   Main,
@@ -8,6 +9,7 @@ import {
 function App() {
   return (
     <Main>
+      <Header />
       <MapContainer>
         <CustomMap />
       </MapContainer>
