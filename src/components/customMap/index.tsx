@@ -1,34 +1,58 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { issContext } from "../../context/issContext";
-import { contextType } from "../../context/issContext/types";
 import { Map, Overlay } from "pigeon-maps";
 import { OverlayImage } from "./customMapStyles";
 import spacestationIcon from '/space-station.png';
 
-type MapInfos = {
+type MapInfosType = {
   center: [number, number],
   zoom: number,
 };
 
-function CustomMap() {
-  const { issInfos }: contextType = useContext(issContext);
+type IssCoordenatesType = [ number, number ]
 
-  const [mapInfos, setMapInfos] = useState<MapInfos>(
+function CustomMap() {
+  const { issInfos, isLoading } = useContext(issContext);
+
+  const [issCoordenates, setIssCoordenates] = useState<IssCoordenatesType>(
+    [0, 0]
+  );
+
+  const [mapInfos, setMapInfos] = useState<MapInfosType>(
     {
       center: [50.879, 4.6997],
       zoom: 11,
     }
   );
 
+  useEffect(() => {
+    const coordenates: IssCoordenatesType = [
+      issInfos.latitude,
+      issInfos.longitude,
+    ]
+
+    setIssCoordenates(coordenates);
+  }, [issInfos]);
+
+  if (isLoading) {
+    return (
+      <h1>Loading...</h1>
+    );
+  }
+
   return (
-    <Map 
+    <Map
+      defaultCenter={[issInfos.latitude, issInfos.longitude]}
+      defaultZoom={8}
       center={mapInfos.center}
       zoom={mapInfos.zoom}
       onBoundsChanged={({ center, zoom }) => {
         setMapInfos({ center, zoom });
       }}
     >
-      <Overlay>
+      <Overlay
+        anchor={issCoordenates}
+      >
         <OverlayImage src={spacestationIcon} />
       </Overlay>
     </Map>
