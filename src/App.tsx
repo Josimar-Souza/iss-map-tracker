@@ -14,7 +14,7 @@ function App() {
       <MapContainer>
         <CustomMap />
       </MapContainer>
-      <Footer />
+      <Footer footerTittle="Created by Josimar Souza" />
     </Main>
   )
 }

@@ -1,8 +1,17 @@
-function Footer() {
+import {
+  FooterContainer,
+  FooterTittle,
+} from './footerStyles';
+
+type FooterProps = {
+  footerTittle?: string,
+};
+
+function Footer({ footerTittle }: FooterProps) {
   return (
-    <footer>
-      <h1>Footer!</h1>
-    </footer>
+    <FooterContainer>
+      <FooterTittle>{ footerTittle }</FooterTittle>
+    </FooterContainer>
   )
 };
 
