@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { LinkedinIcon, GithubIcon } from '@sanity/icons';
 
 export const FooterContainer = styled.footer`
   width: 100%;
@@ -8,7 +7,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export const FooterTittle = styled.h2`
@@ -18,29 +17,13 @@ export const FooterTittle = styled.h2`
   font-weight: 200;
 `;
 
-export const IconsContainer = styled.div`
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Linkedin = styled(LinkedinIcon)`
-  font-size: 35px;
-  color: black;
-  transition: 0.3s;
+export const SpaceStationIconLink = styled.a`
+  font-size: 1rem;
+  text-decoration: none;
+  color: lightblue;
+  transition: 0.5s;
 
   &:hover {
-    color: #444444;
-  }
-`;
-
-export const GitHub = styled(GithubIcon)`
-  font-size: 35px;
-  color: black;
-  transition: 0.3s;
-
-  &:hover {
-    color: #444444;
+    color: blue;
   }
 `;

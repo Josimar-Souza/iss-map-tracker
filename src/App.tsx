@@ -1,4 +1,4 @@
-import CustomMap from "./components/map"
+import CustomMap from "./components/customMap"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
