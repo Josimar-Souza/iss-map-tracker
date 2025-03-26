@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { issContext } from "../../context/issContext";
+import { formatNumber } from "../../helpers";
 import {
   InfosContainer,
   Info,
@@ -22,11 +23,11 @@ function IssInfos() {
       </Info>
       <Divisor />
       <Info>
-        Altitude: {issInfos.altitude}
+        Altitude: {formatNumber('en-US', issInfos.altitude)}
       </Info>
       <Divisor />
       <Info>
-        Velocity: { issInfos.velocity}
+        Velocity: { formatNumber('en-US', issInfos.velocity)}/h
       </Info>
     </InfosContainer>
   );
