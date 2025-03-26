@@ -11,7 +11,7 @@ type IssContextProps = {
   children: React.ReactNode,
 }
 
-const issContext = createContext({});
+export const issContext = createContext({});
 const issTrackerAPI = new IssTrackerAPI(5000);
 
 function IssContext({ children }: IssContextProps) {
