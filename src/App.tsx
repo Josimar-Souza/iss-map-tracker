@@ -5,15 +5,18 @@ import Footer from "./components/footer"
 import {
   Main,
   MapContainer,
+  MapAndInfosContainer,
 } from "./AppStyles"
 
 function App() {
   return (
     <Main>
       <Header>ISS Map Tracker</Header>
-      <MapContainer>
-        <CustomMap />
-      </MapContainer>
+      <MapAndInfosContainer>
+        <MapContainer>
+          <CustomMap />
+        </MapContainer>
+      </MapAndInfosContainer>
       <Footer footerTittle="Created by Josimar Souza" />
     </Main>
   )
