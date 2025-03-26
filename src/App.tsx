@@ -1,8 +1,10 @@
+import CustomMap from "./components/map"
+
 function App() {
   return (
-    <>
-      <h1>Initializing project!</h1>
-    </>
+    <main>
+      <CustomMap />
+    </main>
   )
 }
 
