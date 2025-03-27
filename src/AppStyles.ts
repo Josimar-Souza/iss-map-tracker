@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const Main = styled.main`
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #85C4E1;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 430px) {
+    height: 125vh;
+  }
 `;
 
 export const MapAndInfosContainer = styled.div`
