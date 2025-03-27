@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { issContext } from "../../context/issContext";
 import { Map, Overlay } from "pigeon-maps";
-import { OverlayImage } from "./customMapStyles";
+import { OverlayImage, UserMarker } from "./customMapStyles";
 import spacestationIcon from '/space-station.png';
 import Loading from "../loading";
 
@@ -10,12 +10,14 @@ type MapInfosType = {
   zoom: number,
 };
 
-type IssCoordenatesType = [ number, number ]
+type CoordenatesType = [ number, number ]
 
 function CustomMap() {
   const { issInfos, isLoading } = useContext(issContext);
 
-  const [issCoordenates, setIssCoordenates] = useState<IssCoordenatesType>(
+  const [userLocation, setUserLocation] = useState<CoordenatesType>([0, 0])
+
+  const [issCoordenates, setIssCoordenates] = useState<CoordenatesType>(
     [0, 0]
   );
 
@@ -27,7 +29,13 @@ function CustomMap() {
   );
 
   useEffect(() => {
-    const coordenates: IssCoordenatesType = [
+    navigator.geolocation.getCurrentPosition(({ coords }) => {
+      setUserLocation([coords.latitude, coords.longitude])
+    });
+  }, []);
+
+  useEffect(() => {
+    const coordenates: CoordenatesType = [
       issInfos.latitude,
       issInfos.longitude,
     ]
@@ -58,6 +66,11 @@ function CustomMap() {
       >
         <OverlayImage src={spacestationIcon} />
       </Overlay>
+      {userLocation[0] != 0 && (
+        <Overlay anchor={userLocation}>
+          <UserMarker />
+        </Overlay>
+      )}
     </Map>
   )
 };
