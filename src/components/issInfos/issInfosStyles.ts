@@ -6,6 +6,12 @@ export const InfosContainer = styled.div`
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   padding: 30px;
   min-width: 30%;
+
+  @media only screen and (max-width: 430px) {
+    height: 40vh;
+    width: 90%;
+    padding: 10px;
+  }
 `;
 
 export const Tittle = styled.h1`
@@ -23,6 +29,10 @@ export const Info = styled.p`
 
   &:hover {
     border-left: 20px solid blue;
+  }
+
+  @media only screen and (max-width: 430px) {
+    font-size: 1rem;
   }
 `;
 
