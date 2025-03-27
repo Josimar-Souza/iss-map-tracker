@@ -8,6 +8,10 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 430px) {
+    height: 125vh;
+  }
 `;
 
 export const MapAndInfosContainer = styled.div`
@@ -19,6 +23,8 @@ export const MapAndInfosContainer = styled.div`
 
   @media only screen and (max-width: 430px) {
     flex-direction: column;
+    min-height: 100vh;
+    margin: 25% 0;
   }
 `;
 
@@ -32,6 +38,6 @@ export const MapContainer = styled.div`
 
   @media only screen and (max-width: 430px) {
     width: 90%;
-    height: 30vh;
+    height: 40vh;
   }
 `;

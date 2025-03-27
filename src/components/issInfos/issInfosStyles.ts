@@ -8,7 +8,7 @@ export const InfosContainer = styled.div`
   min-width: 30%;
 
   @media only screen and (max-width: 430px) {
-    height: 40vh;
+    height: fit-content;
     width: 90%;
     padding: 10px;
   }
@@ -17,6 +17,10 @@ export const InfosContainer = styled.div`
 export const Tittle = styled.h1`
   width: 100%;
   text-align: center;
+
+  @media only screen and (max-width: 430px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Info = styled.p`
