@@ -16,6 +16,10 @@ export const MapAndInfosContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media only screen and (max-width: 430px) {
+    flex-direction: column;
+  }
 `;
 
 export const MapContainer = styled.div`
@@ -25,4 +29,9 @@ export const MapContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 430px) {
+    width: 90%;
+    height: 30vh;
+  }
 `;
