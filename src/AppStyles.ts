@@ -22,4 +22,7 @@ export const MapContainer = styled.div`
   width: 45%;
   height: 70vh;
   border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
