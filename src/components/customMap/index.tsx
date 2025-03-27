@@ -3,6 +3,7 @@ import { issContext } from "../../context/issContext";
 import { Map, Overlay } from "pigeon-maps";
 import { OverlayImage } from "./customMapStyles";
 import spacestationIcon from '/space-station.png';
+import Loading from "../loading";
 
 type MapInfosType = {
   center: [number, number],
@@ -36,7 +37,9 @@ function CustomMap() {
 
   if (isLoading) {
     return (
-      <h1>Loading...</h1>
+      <Loading>
+        Loading...
+      </Loading>
     );
   }
 
