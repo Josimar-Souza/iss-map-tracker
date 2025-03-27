@@ -10,6 +10,11 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-around;
   padding: 10px;
+
+  @media only screen and (max-width: 430px) {
+    position: fixed;
+    bottom: 0;
+  }
 `;
 
 export const FooterTittle = styled.h2`

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #85C4E1;
   flex-direction: column;
   align-items: center;
@@ -19,6 +19,8 @@ export const MapAndInfosContainer = styled.div`
 
   @media only screen and (max-width: 430px) {
     flex-direction: column;
+    min-height: 100vh;
+    margin: 25% 0;
   }
 `;
 
@@ -32,6 +34,6 @@ export const MapContainer = styled.div`
 
   @media only screen and (max-width: 430px) {
     width: 90%;
-    height: 30vh;
+    height: 40vh;
   }
 `;
