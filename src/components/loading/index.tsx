@@ -6,13 +6,14 @@ import {
 
 type LoadingProps = {
   children?: React.ReactNode,
+  color?: string,
 }
 
-function Loading({ children }: LoadingProps) {
+function Loading({ children, color }: LoadingProps) {
   return (
     <LoadingContainer>
-      <LoadingIcon />
-      <LoadingTittle>
+      <LoadingIcon color={color} />
+      <LoadingTittle color={color}>
         { children }
       </LoadingTittle>
     </LoadingContainer>

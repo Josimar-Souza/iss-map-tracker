@@ -16,12 +16,12 @@ const loadingAnimation = keyframes`
 
 export const LoadingIcon = styled(EmptyIcon)`
   font-size: 72px;
-  color: white;
+  color: ${ ({ color }) => color ? color : 'white' };
   animation: ${loadingAnimation} 3s infinite;
   animation-timing-function: linear;
 `;
 
 export const LoadingTittle = styled.h2`
-  color: white;
+  color: ${ ({ color }) => color ? color : 'white' };
   margin-top: 10px;
 `;
